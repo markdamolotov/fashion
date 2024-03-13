@@ -1,8 +1,35 @@
+$desktop: 1919px;
+$desktop-s: 1439px;
+
 $tablet: 1023px;
 $tablet-s: 767px;
 
 $mobile: 575px;
 $mobile-s: 479px;
+
+@mixin desktop-above {
+  @media (width > $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (width <= $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-s-above {
+  @media (width > $desktop-s) {
+    @content;
+  }
+}
+
+@mixin desktop-s {
+  @media (width <= $desktop-s) {
+    @content;
+  }
+}
 
 @mixin tablet-above {
   @media (width > $tablet) {

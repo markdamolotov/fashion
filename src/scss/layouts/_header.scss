@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-block: 34px;
+  transition-duration: var(--transition-duration);
+
+  &--small {
+    box-shadow: var(--shadow);
+  }
+
+  &__inner {
+    --container-width: 1760px;
+    --container-padding-x: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop-s {
+      --container-width: 1170px;
+      --container-padding-x: 15px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    --transition-duration: 0s;
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+  }
+}
