@@ -31,7 +31,15 @@ h1 {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.25;
-  // color: var(--color-light);
+  color: var(--color-light);
+
+  @include mobile {
+    font-size: 30px;
+  }
+
+  @include mobile-s {
+    font-size: 20px;
+  }
 }
 
 h2 {
