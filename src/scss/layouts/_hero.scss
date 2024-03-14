@@ -7,7 +7,7 @@
   color: var(--color-light);
   background: url('./../img/hero/hero-bg.webp') center/cover no-repeat;
   background-color: var(--color-dark-alt);
-  z-index: -1;
+  z-index: 0;
 
   @include tablet-s {
     height: calc(70vh - 100px);
@@ -26,7 +26,7 @@
     bottom: 0;
     height: 42%;
     background: var(--gradient);
-    z-index: -1;
+    z-index: 0;
   }
 
   &__inner {
@@ -39,6 +39,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    z-index: 1;
 
     @include tablet-s {
       grid-column: 2 span;
